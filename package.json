@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "description": "Detect soft navigation bar for Android devices",
   "authors": [
-      "Le Quang Huy",
-      "Rajiv Shah <rajivshah1@icloud.com>"
+    "Le Quang Huy",
+    "Rajiv Shah <rajivshah1@icloud.com>"
   ],
   "license": "MIT",
   "homepage": "https://github.com/rajivshah3/react-native-detect-navbar-android",
@@ -15,7 +15,7 @@
     "docs": "./node_modules/.bin/esdoc",
     "format": "prettier --write \"**/*.{js,json}\"",
     "lint": "./node_modules/.bin/eslint .",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && yarn lint",
     "version": "./node_modules/.bin/auto-changelog -p"
   },
   "lint-staged": {
