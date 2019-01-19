@@ -1,4 +1,4 @@
-# react-native-detect-navbar-android
+# react-native-detect-navbar-android-sync
 Detect soft navigation bar for Android devices
 
 Note: this project is Android only
@@ -8,7 +8,7 @@ Note: this project is Android only
 * download this from npm
 
 ```bash
-npm install react-native-detect-navbar-android --save
+npm install react-native-detect-navbar-android-sync --save
 ```
 
 * Run `react-native link` or...
@@ -16,8 +16,8 @@ npm install react-native-detect-navbar-android --save
 * Edit `android/settings.gradle`:
 
   ```diff
-  + include ':react-native-detect-navbar-android'
-  + project(':react-native-detect-navbar-android').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-detect-navbar-android/android')
+  + include ':react-native-detect-navbar-android-sync'
+  + project(':react-native-detect-navbar-android-sync').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-detect-navbar-android-sync/android')
   ```
 
 * Edit `android/app/build.gradle`:
@@ -27,7 +27,7 @@ npm install react-native-detect-navbar-android --save
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"
-  + compile project(':react-native-detect-navbar-android')
+  + compile project(':react-native-detect-navbar-android-sync')
   }
   ```
 
@@ -36,7 +36,7 @@ npm install react-native-detect-navbar-android --save
   ```diff
   + import import com.rndetectnavbarandroid.RNDetectNavbarAndroidPackage;
   ```
-  
+
   ```diff
     @Override
     protected List<ReactPackage> getPackages() {
@@ -50,11 +50,11 @@ npm install react-native-detect-navbar-android --save
 ## Usage
 
 ```js
-import DetectNavbar from 'react-native-detect-navbar-android';
+import DetectNavbar from 'react-native-detect-navbar-android-sync';
 // or
-import {DetectNavbar} from 'react-native-detect-navbar-android';
+import {DetectNavbar} from 'react-native-detect-navbar-android-sync';
 // or
-const DetectNavbar = require('react-native-detect-navbar-android');
+const DetectNavbar = require('react-native-detect-navbar-android-sync');
 
 // methods (Android Only, don't call on iOS)
 DetectNavbar.hasSoftKeys().then((bool) => {
